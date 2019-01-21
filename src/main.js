@@ -47,17 +47,10 @@ setTimeout(run, 3000);
 function check() {
     let visibleFront = document.getElementsByClassName('front');
     let visibleImage = document.getElementsByClassName('image');
-    for (let i = 0; i < visibleFront.length; i++) {
-        if (visibleFront[i].classList.toggle("flipped")) {
-            visibleFront[i].addEventListener('click', () => {visibleFront[i].classList.toggle("flipped")});
-            if (visibleImage[i].currentSrc === visibleImage[i].currentSrc) {
-                return visibleFront[i].classList.toggle("flipped");
-            }
-            else {
-                return !visibleFront[i].classList.toggle("flipped");
-            }
-        }
+    if (!visibleFront[4].classList.toggle("flipped")) {
+        console.log("hjk");
     }
+    console.log(visibleFront);
     console.log(visibleImage);
 }
 check();
