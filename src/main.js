@@ -18,7 +18,7 @@ function restartGame() {
         let inner = `<div class="flip-card">
             <div class="flip-card-inner">
                 <div class="containPic front">
-                    <img src="${path+picturesArray[i]}" alt="Second image" class="image">
+                    <img src="${path+picturesArray[i]}" alt="Second image">
                 </div>
                 <div class="containBack back"></div>
                 </div>
@@ -33,9 +33,11 @@ restartGame();
 
 function run() {
     let visibleInner = document.getElementsByClassName('flip-card-inner');
+
     for (let i = 0; i < visibleInner.length; i++) {
         if (visibleInner[i].classList.toggle("flipped")) {
             visibleInner[i].addEventListener('click', () => {visibleInner[i].classList.toggle("flipped")});
+
         } else {
             return false;
         }
@@ -44,14 +46,14 @@ function run() {
 
 setTimeout(run, 3000);
 
-function check() {
-    let visibleFront = document.getElementsByClassName('front');
-    let visibleImage = document.getElementsByClassName('image');
-    if (!visibleFront[4].classList.toggle("flipped")) {
-        console.log("hjk");
-    }
-    console.log(visibleFront);
-    console.log(visibleImage);
-}
-check();
-
+// function checkGame() {
+//     let visibleFront = document.getElementsByClassName('front');
+//     for (let i = 0; i < visibleFront.length; i++) {
+//         visibleFront[i].addEventListener('click', () => {visibleFront[i].classList.toggle("flippeda")});
+//         if (visibleFront[i].classList.toggle("flipped")) {
+//             console.log(visibleFront[i].classList.toggle('flipped'));
+//         }
+//     }
+//     console.log(visibleFront);
+// }
+// checkGame();
